@@ -1,0 +1,18 @@
+/*
+  Palette tokens. This is the only file in the project that may hold colour literals.
+  Provenance: k-means (farthest-point init, 30 iterations) over real pixels, each centroid
+  snapped to the nearest actual pixel, whose coordinate is noted beside the value.
+  brand: brand/LOGO BOOSTR PNG.png (k=3: ground and mark)
+  reference: reference/BOOSTR 1.jpg.jpeg (k=5 on saturated pixels for accents, k=5 on the rest for greys)
+*/
+:root {
+  --color-bg: #000000; /* logo ground px(0,0) */
+  --color-ink: #f9fafa; /* logo mark px(998,450) */
+  --color-surface: #1e1f24; /* reference grey 2 px(751,78) */
+  --color-line: #525564; /* reference grey 3 px(1492,348) */
+  --color-muted: #b9b9c1; /* reference grey 4 px(873,217) */
+  --color-mint: #1ad4bf; /* reference teal cluster px(711,780) */
+  --color-violet: #946bef; /* reference violet cluster px(736,837) */
+  --color-up: var(--color-mint);
+  --color-down: var(--color-violet);
+}

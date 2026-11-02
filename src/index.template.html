@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BOOSTR | Fees that find their maker</title>
+<meta name="description" content="BOOSTR ties Solana tokens to public handles so a slice of each swap reaches whoever made the thing.">
+<meta property="og:title" content="BOOSTR">
+<meta property="og:description" content="Fees that find their maker.">
+<meta property="og:image" content="https://boostr.lol/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/json" id="register">{{register}}</script>
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+{{ca}}
+
+<header class="bar" id="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top" aria-label="BOOSTR home"><img src="brand/boostr-logo.png" width="36" height="36" alt=""><span>BOOSTR</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#market">Board</a><a href="#flow">Route</a><a href="#numbers">Numbers</a><a href="#walk">Walkthrough</a><a href="#why">Why</a>
+    </nav>
+    <div class="bar-end">
+      <span class="pill" id="status" role="status" data-state="loading"><i class="dot"></i><b>Syncing</b></span>
+      <span class="chip chain" data-record="chain" data-state="{{chain_state}}">{{chain_name}}</span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero">
+  <div class="mesh" aria-hidden="true"><i class="b1" data-depth="0.4"></i><i class="b2" data-depth="0.7"></i><i class="b3" data-depth="0.25"></i><i class="grid" data-depth="0.15"></i></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow" data-reveal>Creator coins, Solana native</p>
+      <h1 data-reveal>Every trade can pay the person behind it.</h1>
+      <p class="lede" data-reveal>BOOSTR ties a token to a public handle, then streams part of each swap fee toward whoever made it, with nothing tucked out of sight. Below, a board follows whatever the chain is boosting this moment.</p>
+      <div class="cta" data-reveal>
+        <a class="btn primary" href="#market">Open the board</a>
+        <a class="btn ghost" href="#flow">Trace a route</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="halo" data-depth="0.9"></div>
+      <img class="mark" data-depth="1.3" src="brand/boostr-logo.png" width="320" height="320" alt="">
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Live movers">
+  <div class="track" id="ticker"><span class="tick skel-t"></span><span class="tick skel-t"></span><span class="tick skel-t"></span><span class="tick skel-t"></span><span class="tick skel-t"></span><span class="tick skel-t"></span></div>
+</div>
+
+<div class="wrap">
+<section class="sect" id="market">
+  <div class="sect-head" data-reveal>
+    <div><p class="eyebrow">Market board</p><h2>Where the chain is pushing volume</h2></div>
+    <div class="tools">
+      <div class="tabs" role="tablist" aria-label="Sort board">
+        <button type="button" role="tab" aria-selected="true" data-sort="volume">Volume</button>
+        <button type="button" role="tab" aria-selected="false" data-sort="change">Movers</button>
+        <button type="button" role="tab" aria-selected="false" data-sort="liquidity">Depth</button>
+      </div>
+      <label class="search"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M7 12.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Zm4 0 3.5 3"/></svg><input id="q" type="search" placeholder="Filter by symbol or name" autocomplete="off" aria-label="Filter the board"><kbd>/</kbd></label>
+    </div>
+  </div>
+  <div class="panel board" data-reveal data-spot>
+    <div class="row head" aria-hidden="true"><span>#</span><span>Token</span><span>Price</span><span>24h</span><span>Volume</span><span>Liquidity</span><span></span></div>
+    <div id="rows" aria-label="Top boosted Solana tokens"></div>
+    <p class="board-error" id="board-error" role="status" hidden>No answer from the feed. Trying again, waiting a little longer each round.</p>
+  </div>
+</section>
+
+<section class="sect" id="flow">
+  <div class="sect-head" data-reveal><div><p class="eyebrow">Fee route</p><h2>Value that stays in plain sight</h2></div></div>
+  <div class="panel flow" data-reveal data-spot>
+    <ol class="nodes">
+      <li><b>01</b><span>Token trades</span><i>Every swap leaves a small fee behind.</i></li>
+      <li class="link" aria-hidden="true"><svg viewBox="0 0 100 4" preserveAspectRatio="none"><path d="M0 2H100" class="dash d1"/></svg></li>
+      <li><b>02</b><span>Handle pairing</span><i>The token is tied to one public account.</i></li>
+      <li class="link" aria-hidden="true"><svg viewBox="0 0 100 4" preserveAspectRatio="none"><path d="M0 2H100" class="dash d2"/></svg></li>
+      <li><b>03</b><span>Creator payout</span><i>Payout lands in the maker wallet.</i></li>
+      <li class="link" aria-hidden="true"><svg viewBox="0 0 100 4" preserveAspectRatio="none"><path d="M0 2H100" class="dash d1"/></svg></li>
+      <li><b>04</b><span>Onchain receipt</span><i>Anyone can verify what moved.</i></li>
+    </ol>
+    <div class="empty"><i class="dot"></i><span>Zero payouts so far</span><em>pending</em></div>
+  </div>
+</section>
+
+<section class="sect" id="numbers">
+  <div class="sect-head" data-reveal><div><p class="eyebrow">Board numbers</p><h2>The board in four readings</h2></div></div>
+  <div class="tiles">
+    <article class="stat panel" data-reveal data-spot><p>Tokens tracked</p><strong data-stat="count">—</strong><small>Boosted Solana pairs in view</small></article>
+    <article class="stat panel" data-reveal data-spot><p>Combined volume</p><strong data-stat="volume">—</strong><small>Across the board in 24h</small></article>
+    <article class="stat panel" data-reveal data-spot><p>Combined liquidity</p><strong data-stat="liquidity">—</strong><small>Pooled depth behind them</small></article>
+    <article class="stat panel" data-reveal data-spot><p>Strongest move</p><strong data-stat="move">—</strong><small data-stat="moveName">Best 24h change</small></article>
+  </div>
+</section>
+
+<section class="sect" id="walk">
+  <div class="sect-head" data-reveal><div><p class="eyebrow">Walkthrough</p><h2>From token to paid creator in four beats</h2></div></div>
+  <div class="panel walk" data-reveal data-spot>
+    <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+    <ol class="steps" id="steps">
+      <li class="on"><button type="button"><b>1</b><span>Pick a token</span><i>Start from any Solana coin that already trades.</i></button></li>
+      <li><button type="button"><b>2</b><span>Attach a handle</span><i>Name the public account that should earn.</i></button></li>
+      <li><button type="button"><b>3</b><span>Let trades accrue</span><i>Fees collect while the market does its work.</i></button></li>
+      <li><button type="button"><b>4</b><span>Forward and prove</span><i>The payout lands with a receipt anyone can open.</i></button></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sect" id="why">
+  <div class="sect-head" data-reveal><div><p class="eyebrow">Why it works</p><h2>One gift ends. A route keeps going.</h2></div></div>
+  <div class="pair">
+    <article class="panel card" data-reveal data-spot><h3>One-off gift</h3><p>Someone sends funds once and the story stops there.</p><div class="path"><span>Send</span><i></i><span>Receive</span></div></article>
+    <article class="panel card hot" data-reveal data-spot><h3>BOOSTR route</h3><p>Funds follow market activity, so support scales with attention.</p><div class="path"><span>Trade</span><i></i><span>Fees</span><i></i><span>Forward</span><i></i><span>Creator</span></div></article>
+  </div>
+</section>
+
+<section class="sect" id="spread">
+  <div class="sect-head" data-reveal><div><p class="eyebrow">Volume spread</p><h2>Who is carrying the day</h2></div></div>
+  <div class="split">
+    <div class="panel chart" data-reveal data-spot><div class="bars" id="bars" role="img" aria-label="Bar chart of 24 hour volume by token"></div></div>
+    <div class="panel spot" data-reveal data-spot><h3>Paired creators</h3><p>Verified handles will be listed here once pairings exist.</p><div class="empty"><i class="dot"></i><span>Nobody paired</span><em>pending</em></div></div>
+  </div>
+</section>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top"><img src="brand/boostr-logo.png" width="28" height="28" alt=""><span>BOOSTR</span></a>
+    <span class="chip chain" data-record="chain" data-state="{{chain_state}}">{{chain_name}}</span>
+    <span class="foot-note">boostr.lol</span>
+  </div>
+</footer>
+</body>
+</html>

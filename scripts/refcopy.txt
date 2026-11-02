@@ -1,0 +1,122 @@
+Tipr — Launch coins that tip people
+Tipr coin CA:
+CA:
+3kRQDKPGqMWwBdGjiVPpPqVzFsnYG5PDqvrVz1D2pump
+Copy CA
+View
+↗
+tipr
+Home
+Explore
+Creator vaults
+Tips
+Analytics
+Launch
+Routes
+Docs
+All services are live
+Connect Solana
+For pump.fun launches
+Search creators, tokens or X accounts
+⌘ K
+launch coins that tip people.
+Launch a pump.fun coin around a creator on Solana and forward creator rewards to their public tip destination.
+Launch a coin
+Explore tips
+No network activity yet.
+Waiting for indexer
+Crypto on X
+People shaping the conversation
+Auto-playing
+Featured voice
+01
+/
+15
+@
+VitalikButerin
+Vitalik Buterin
+Ethereum co-founder
+View on X
+𝕏
+Live tip flow
+Value, routed visibly
+Live map
+$
+$TOKEN
+Trading fees
+Market
+Eligible fees
+Tipr
+Creator
+Public destination
+Receipt
+Onchain proof
+No tips routed yet
+Awaiting first route
+Total routed
+$150
+$150 routed to creators
+Active routes
+0
+No routes yet
+Tokens launched
+No launches yet
+Creators supported
+Distinct X accounts
+20 second product demo
+One launch. A lasting creator route.
+/ 20 sec
+1
+— 0
+5
+Choose a creator
+Choose their public X identity and tip destination.
+@creator
+X identity
+Your token
+pump.fun listing
+pump.fun
+Solana
+Creator rewards
+Launch wallet
+Forward on Solana
+Illustrated Solana flow
+Why Tipr
+Support that compounds with activity.
+A direct X Money payment is a single transfer between people. A pump.fun coin can generate ongoing creator rewards. Rewards go to the launch wallet and must be forwarded to the creator.
+Direct payment
+Send once → received once
+Tipr route
+Trade → rewards → forward → creator
+Creator spotlight
+Creators receiving value
+No creators available.
+Creator profiles will appear when the data source returns verified accounts.
+Token launches
+No data
+Waiting for indexer.
+The chart will populate when real events are available.
+Collapse sidebar
+Open navigation
+Tipr on X
+Activity
+Vitalik Buterin on X
+Previous creator
+Next creator
+Show Vitalik Buterin
+Show Michael Saylor
+Show Balaji Srinivasan
+Show Anthony Pompliano
+Show Andreas Antonopoulos
+Show ZachXBT
+Show Raoul Pal
+Show Brian Armstrong
+Show Arthur Hayes
+Show Nic Carter
+Show Will Clemente
+Show Sandeep Nailwal
+Show Cathie Wood
+Show Benjamin Cowen
+Show CZ
+Pause demo
+Notifications alt+T
